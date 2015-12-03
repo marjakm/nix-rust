@@ -17,6 +17,7 @@ mod ffi {
     pub use libc::{close, read, write, pipe, ftruncate, unlink};
     pub use libc::{fork, getpid, getppid};
 
+    #[allow(improper_ctypes)]
     extern {
         // duplicate a file descriptor
         // doc: http://man7.org/linux/man-pages/man2/dup.2.html
